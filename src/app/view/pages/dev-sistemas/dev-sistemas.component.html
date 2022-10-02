@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<div style="margin: 1%; background: rgba(0,0,0,0.5); border-radius: 5px; padding: 1rem;">
+    <div style="margin: 1%;">
+        <form action="" (ngSubmit)="onSubmit()">
+            <div class="col-xl-8 col-lg-7" style="width: 100%;padding-top: 3%; padding-bottom: 2%; text-align: left; padding-left: 0;">
+                <h4 style="color:#bfbfbf; font-size: smaller; padding-left: 0; font-weight: bold;">Para que possa ser feito um serviço preciso de construção de sistemas, é recomendável uma consulta presencial. 
+                Contudo, preencha nosso formulário abaixo e nos informe acerca das funcionalidades de sistema desejadas. Em breve entraremos em contato.</h4>
+            </div>
+            <div style="padding-bottom:2%;">
+                <h6 style="color: #bfbfbf; font-size: smaller; font-weight: bold;">Acerca do Layout. Qual a sua pré-disposição em adquirir um layout genérico ou customizado?</h6>
+                <select id="emailAddress" type="text-align" name="servico.disposicaoLayoutGenerico" [(ngModel)]="servico.disposicaoLayoutGenerico" style="width: 100%; height: 3.8rem; color: #bfbfbf; font-size: 17px; background-color: rgba(0,0,0,0); border: 2px solid #bfbfbf;">
+                    <option style="color: #000;" value="- - - - - - - -">- - - - - - - -</option>
+                    <option style="color: #000;" value="deixar o layout à escolha do desenvolvedor">prefiro deixar o layout à escolha do desenvolvedor (genérico)</option>
+                    <option style="color: #000;" value="descrever ao desenvolvedor o layout que deseja">prefiro descrever em detalhes o layout que desejo (customizado)</option>
+                </select>
+            </div>
+            <div style="padding-bottom:2%;">
+                <h6 style="color: #bfbfbf; font-size: smaller; font-weight: bold;">Informe a plataforma que você deseja executar o seu sistema:</h6>
+                <select id="emailAddress" type="text-align" name="servico.tipoPlataformaSistema" [(ngModel)]="servico.tipoPlataformaSistema" style="width: 100%; height: 3.8rem; color: #bfbfbf; font-size: 17px; background-color: rgba(0,0,0,0); border: 2px solid #bfbfbf;">
+                    <option style="color: #000;" value="- - - - - - - -">- - - - - - - -</option>
+                    <option style="color: #000;" value="sistema no estilo website">sistema no estilo website</option>
+                    <option style="color: #000;" value="aplicativos móveis(Android e IOS)">aplicativos móveis(Android e IOS)</option>
+                    <option style="color: #000;" value="outros">outros</option>
+                </select>
+            </div>
+            <div style="padding-bottom:2%;">
+                <h6 style="color: #bfbfbf; font-size: smaller; font-weight: bold;">Descreva abaixo o sistema como deseja, juntamente com suas funcionalidades:</h6>
+                <textarea class="form-control" id="descricaoSistema" type="text" placeholder="Descreva aqui aspéctos e funções que deseja para o seu sistema." 
+                aria-label="Descreva seu Sistema" name="servico.descricaoServico" [(ngModel)]="servico.descricaoServico" style="height: 20rem; font-size: 17px; color: #bfbfbf; background-color: rgba(0,0,0,0); border: 2px solid #bfbfbf;"></textarea>
+            </div>
+            <p style="font-size: small; text-align: left; color: #bfbfbf; padding-bottom:15%;">Entraremos e contato em breve!!! Obrigado.</p>
+            <div style="display: block; text-align: center; width: 100%;">
+                <button class="btn btn-primary" type="submit" style="margin: 2%; font-size: 100%; background: rgba(0,0,0,0.5); color: #bfbfbf; border: 1px solid #bfbfbf;" >Finalizar</button>
+            </div> 
+        </form>
+    </div>
+</div>
+
+<app-footer></app-footer>

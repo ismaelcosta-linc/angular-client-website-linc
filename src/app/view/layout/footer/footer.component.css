@@ -1,0 +1,30 @@
+.text-center{
+    background-color: rgba(0,0,0,0.50);
+    margin: 0 1% 0 1%;
+    border: 1px solid rgba(0,0,0,0.0);
+    border-radius: 3px;
+    margin-bottom: 3rem;
+    margin-top: 100%;
+    }
+    
+    p{
+    color: #bfbfbf;
+    margin-bottom: 0;
+    }
+    
+    small{
+    color: #bfbfbf;
+    }
+    
+    .footer1{
+    padding: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    }
+    
+    .footer2{
+    text-align: left;
+    margin-left: 1%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    }

@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<div style="margin: 1%; background: rgba(0,0,0,0.5); border-radius: 5px; padding: 1rem;">
+    <div style="margin: 1%;">
+        <form action="" (ngSubmit)="onSubmit()">
+            <div class="col-xl-8 col-lg-7" style="width: 100%;padding-top: 3%; padding-bottom: 1%; text-align: left; padding-left: 0; max-width: 100%;">
+                <h4 style="color:#bfbfbf; font-size: 17px; padding-left: 0; font-weight: bold;">Por favor. Preencha o formulário abaixo e nos informe sobre sua situação. Em breve entraremos em contato.</h4>
+            </div>
+            <div style="padding-bottom:2%;">
+                <h6 style="color: #bfbfbf; font-size: smaller; font-weight: bold;">Qual sua pré-disposição para um atendimento por meio de acesso remoto ao seu dispositivo?</h6>
+                <select type="text-align" name="servico.disposicaoRemotoServico" [(ngModel)]="servico.disposicaoRemotoServico" style="width: 100%; height: 3.8rem; color: #bfbfbf; font-size: 17px; background: rgba(0,0,0,0); border: 2px solid #bfbfbf;">
+                    <option style="color: #000;" value="- - - - - - - -">- - - - - - - -</option>
+                    <option style="color: #000;" value="prefiro atendimento remoto">Prefiro o atendimento REMOTO (Econômico).</option>
+                    <option style="color: #000;" value="prefiro atendimento presencial">Prefiro o atendimento PRESENCIAL.</option>
+                </select>
+            </div>
+            <div style="padding-bottom:2%;">
+                <h6 style="color: #bfbfbf; font-size: smaller; font-weight: bold;">Informe o tipo de dispositivo que será operado durante do atendimento:</h6>
+                <select id="emailAddress" type="text-align" name="servico.tipoDispositivoServico" [(ngModel)]="servico.tipoDispositivoServico" style="width: 100%; height: 3.8rem; color: #bfbfbf; font-size: 17px; background: rgba(0,0,0,0); border: 2px solid #bfbfbf;">
+                    <option style="color: #000;" value="- - - - - - - -">- - - - - - - -</option>
+                    <option style="color: #000;" value="computador/notebook">Computador/Notebook.</option>
+                    <option style="color: #000;" value="smartphone(celular)">Smartphone(Celular).</option>
+                    <option style="color: #000;" value="tablet">Tablet.</option>
+                    <option style="color: #000;" value="outros">Outros.</option>
+                </select>
+            </div>
+            <div style="padding-bottom:2%;">
+                <h6 style="color: #bfbfbf; font-size: smaller; font-weight: bold;">Descreva abaixo seu problema em detalhes:</h6>
+                <textarea class="form-control" id="descricaoSistema" type="text" placeholder="Descreva aqui aspéctos e funções que deseja para o seu sistema."
+                name="servico.descricaoServico" [(ngModel)]="servico.descricaoServico" style="height: 20rem; font-size: 17px; color: #bfbfbf; background: rgba(0,0,0,0); border: 2px solid #bfbfbf;"></textarea>
+            </div>
+            <p style="font-size: small; text-align: left; color: #bfbfbf; padding-bottom:10%; font-weight: bold;">Entraremos e contato em breve!!! Obrigado.</p>
+            <div style="display: block; text-align: center; width: 100%;">
+                <button class="btn btn-primary" type="submit" style="font-size: 100%; background: rgba(0,0,0,0.5); color: #bfbfbf; border: 1px solid #bfbfbf;" >Finalizar</button>
+            </div> 
+        </form>
+    </div>
+</div>
+
+<app-footer></app-footer>

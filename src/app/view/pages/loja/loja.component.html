@@ -1,0 +1,139 @@
+
+<app-navbar></app-navbar>
+
+<div class="text-center jumbotron jumbotron-fluid mt-3 rounded shadow-lg" style="background-color: rgba(0,0,0,0.60); padding: 2rem 0 2rem 0;">
+  <!-- <p style="text-align: left; color: #bfbfbf; margin: 0 0 1rem 2rem; border-left: 5px solid #bfbfbf;">{{nomeCliente}}</p> -->
+  <div class="container" style="margin: 0 !important; max-width: 100%; padding-bottom: 1.5rem;">
+    <div class="input-group input-group-lg mt-5" style="margin: 0 !important;">
+      <div class="text-center mudaflex" style="width: 100%; height: 100%; display: flex; flex-direction: row; justify-content: space-between; align-content: space-between; background: rgba(0,0,0,0);">
+        <div class="extendeDiv" style="width: 33%;">
+          <p class="mx-auto my-0" style="background: rgba(0,0,0,0); -webkit-text-fill-color: #bfbfbf; font-size: 1rem; height: 100%; border-left: 5px solid #bfbfbf; padding-left: 1rem; text-align: left; font-weight: bold;">
+            Usuário: {{nomeCliente}}, {{enderecoCliente}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin: 0 !important; max-width: 100%;">
+    <div class="input-group input-group-lg mt-5" style="margin: 0 !important;">
+      <div class="text-center mudaflex" style="width: 100%; height: 100%; display: flex; flex-direction: row; justify-content: space-between; align-content: space-between; background: rgba(0,0,0,0);">
+          <div class="extendeDiv" style="width: 33%;">
+            <h1 class="mx-auto my-0 text-uppercase" style="background: rgba(0,0,0,0); -webkit-text-fill-color: #bfbfbf; font-size: 1.5rem; height: 100%; border-right: 5px solid #bfbfbf; padding-right: 7px;">
+              <a href="" class="btn text-uppercase" id="opcoes1" style=" width:100%; color: #bfbfbf !important; padding: 2rem; height: 100%; border-radius: 5px; background: rgba(0,0,0,0.4); font-weight: bolder;">Criação e Desenvolvimento de Sistemas</a>
+            </h1>
+          </div>
+          <div class="extendeDiv" style="width: 33%;">
+            <h1 class="mx-auto my-0 text-uppercase" style="background: rgba(0,0,0,0); -webkit-text-fill-color: #bfbfbf; font-size: 1.5rem; height: 100%; border-right: 5px solid #bfbfbf; padding-right: 7px;">
+              <a href="" class="btn text-uppercase separaMargin" id="opcoes1" style=" width:100%; color: #bfbfbf !important; padding: 2rem; height: 100%; border-radius: 5px; background: rgba(0,0,0,0.4); font-weight: bolder;">Reparação e Manutenção de Dispositivos</a>
+            </h1>
+          </div>
+          <div class="extendeDiv" style="width: 33%;">
+            <h1 class="mx-auto my-0 text-uppercase" style="background: rgba(0,0,0,0); -webkit-text-fill-color: #bfbfbf; font-size: 1.5rem; height: 100%; border-right: 5px solid #bfbfbf; padding-right: 7px;">
+              <a href="" class="btn text-uppercase separaMargin" id="opcoes1" style=" width:100%; color: #bfbfbf !important; padding: 2rem; height: 100%; border-radius: 5px; background: rgba(0,0,0,0.4); font-weight: bolder;">Serviço e Suporte Técnico de Informática</a>
+            </h1>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center jumbotron jumbotron-fluid mt-3 rounded shadow-lg">
+  <div class="container">
+    <h1 class="display-2 mb-4">LINC</h1>
+    <div class="input-group input-group-lg mt-5">
+      <form (ngSubmit)="seachProduto()" #userForm="ngForm" style="width: 100%;">
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"  name="nomeProduto" [(ngModel)]="nomeProduto" style="border: 3px solid #bfbfbf; font-size: 20px;">
+        <button type="submit" style="visibility: hidden;" >ENTRAR</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="row row-cols-1 g-4" style="margin: 5rem 1rem 8rem 1rem;">
+
+    <div class="cardg" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: left;">
+
+      <!-- <div class="" style="max-width: 300px; max-height: 450px; width: 300px; height: 450px;  border-radius: 1px; background: rgba(0,0,0,0.5); padding: 8px;">
+        <a href=""> 
+          <div style="width: 100%; height: 70%;">
+            <img [src]="imagePath" class="card-img-top" style=" max-height: 100%; height: 100%; max-width: 100%; width: 100%; border-radius: 5px;">
+          </div>
+          <div style="max-width: 100%; max-height: 28%; width: 100%; height: 28%; border: 1px solid rgba(255,255,255,0.1); border-radius: 5px; margin-top: 8px;">
+            <div style="height: 35%; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: row;">
+              <div style="width: 80%;">
+                <h5 style="margin: 0; color: #bfbfbf; height: 100%; font-size: 1.5rem; padding: 7px 5px 7px 5px;">teste</h5>
+              </div>
+              <div style="width: 20%; text-align: right;">
+                <p style="margin: 0; color: #bfbfbf; height: 100%; font-size: 12px; padding: 13px 5px 8px 5px;">R$500.7</p>
+              </div>
+            </div>
+            <div style="height: 65%; text-align: left;">
+              <p style="margin: 0; color: #bfbfbf; padding: 5px;">teste</p>
+            </div>
+          </div>
+        </a>
+      </div> -->
+
+      <!-- <div class="" style="max-width: 300px; max-height: 450px; width: 300px; height: 450px;  border-radius: 1px; background: rgba(0,0,0,0.5); padding: 8px;">
+          <a href=""> 
+              <div style="max-width: 100%; width: 100%; max-height: 70%; height: 70%;">
+                  <img [src]="imagePath" class="card-img-top" style=" min-height: 100%; max-height: 100%; height: 100%; max-width: 100%; width: 100%; border-radius: 5px;">
+              </div>
+              <div style="max-width: 100%; width: 100%; max-height: 8%; height: 8%; border: 1px solid rgba(255,255,255,0.1); border-radius: 5px; margin-top: 8px; display: flex; flex-direction: row;">
+                  <div style="width: 75%;">
+                      <h5 style="margin: 0; color: rgba(255,255,255,0.6); height: 100%; font-size: 13px; padding: 7px 5px 7px 5px; text-align: left; font-weight: bold;">Camera de Segurança</h5>
+                  </div>
+                  <div style="width: 25%; text-align: right;">
+                      <p style="margin: 0; color: rgba(255,255,255,0.6); height: 100%; font-size: 11px; padding: 7px 5px 7px 0; font-weight: bold; text-align: right;">R$500000.7</p>
+                  </div>
+              </div>
+              <div style="max-width: 100%; width: 100%; max-height: 18%; height: 18%; border: 1px solid rgba(255,255,255,0.1); border-radius: 5px; margin-top: 8px;">
+                  <p style="margin: 0; padding: 7px 5px 7px 5px; text-align: left; color: rgba(255,255,255,0.6); font-size: 11px; font-weight: bold;">teste</p>
+              </div>
+          </a>
+      </div> -->
+
+      <!-- <div class="" style="max-width: 300px; max-height: 400px; width: 300px; height: 400px;  border-radius: 1px; background: rgba(0,0,0,0.5); padding: 8px;">
+          <a href=""> 
+              <div style="max-width: 100%; width: 100%; max-height: 70%; height: 70%;">
+                  <img [src]="imagePath" class="card-img-top" style=" min-height: 100%; max-height: 100%; height: 100%; max-width: 100%; width: 100%; border-radius: 5px;">
+              </div>
+              <div style="max-width: 100%; width: 100%; max-height: 8%; height: 8%; border: 1px solid rgba(255,255,255,0.1); border-radius: 5px; margin-top: 8px; display: flex; flex-direction: row;">
+                  <div style="width: 75%;">
+                      <h5 style="margin: 0; color: rgba(255,255,255,0.6); height: 100%; font-size: 13px; padding: 7px 5px 7px 5px; text-align: left; font-weight: bold;">Camera de Segurança</h5>
+                  </div>
+                  <div style="width: 25%; text-align: right;">
+                      <p style="margin: 0; color: rgba(255,255,255,0.6); height: 100%; font-size: 11px; padding: 7px 5px 7px 0; font-weight: bold; text-align: right;">R$ 500000.7</p>
+                  </div>
+              </div>
+              <div style="max-width: 100%; width: 100%; max-height: 18%; height: 18%; border: 1px solid rgba(255,255,255,0.1); border-radius: 5px; margin-top: 8px;">
+                  <p style="margin: 0; padding: 7px 5px 7px 5px; text-align: left; color: rgba(255,255,255,0.6); font-size: 11px; font-weight: bold;">teste teste sdf sdfsd fsdf sd sdfs sdf sddf ssdf teste sdf sdfsd fsdf sd sdfs sdf sddf ssdf teste sdf sdfsd fsdf sd sdfs sdf sddf ssdf </p>
+              </div>
+          </a>
+      </div> -->
+
+      <div *ngFor="let produto of produtos" class="" style="max-width: 300px; max-height: 400px; width: 300px; height: 400px;  border-radius: 5px; background: rgba(0,0,0,0.5); padding: 8px; margin: 1.5rem 0.5rem 1.5rem 0.5rem;">
+          <a role="button" (click)=lojaItem(produto.idProduto)> 
+              <div style="max-width: 100%; width: 100%; max-height: 70%; height: 70%;">
+                  <img src="{{produto.pathImagemProduto}}" class="card-img-top" style=" min-height: 100%; max-height: 100%; height: 100%; max-width: 100%; width: 100%; border-radius: 5px;">
+              </div>
+              <div style="max-width: 100%; width: 100%; max-height: 8%; height: 8%; border: 1px solid rgba(255,255,255,0.1); border-radius: 5px; margin-top: 8px; display: flex; flex-direction: row;">
+                  <div style="width: 75%;">
+                      <h5 style="margin: 0; color: rgba(255,255,255,0.6); height: 100%; font-size: 13px; padding: 7px 5px 7px 5px; text-align: left; font-weight: bold;">{{produto.nomeProduto}}</h5>
+                  </div>
+                  <div style="width: 25%; text-align: right;">
+                      <p style="margin: 0; color: rgba(255,255,255,0.6); height: 100%; font-size: 11px; padding: 7px 5px 7px 0; font-weight: bold; text-align: right;">R$ {{produto.precoRevendaUnidade}}</p>
+                  </div>
+              </div>
+              <div style="max-width: 100%; width: 100%; max-height: 18%; height: 18%; border: 1px solid rgba(255,255,255,0.1); border-radius: 5px; margin-top: 8px;">
+                  <p style="margin: 0; padding: 7px 5px 7px 5px; text-align: left; color: rgba(255,255,255,0.6); font-size: 11px; font-weight: bold;">{{produto.descricaoProduto}}</p>
+              </div>
+          </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+ 
+
+
+<app-footer></app-footer>
